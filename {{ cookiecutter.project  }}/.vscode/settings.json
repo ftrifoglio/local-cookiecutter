@@ -1,0 +1,29 @@
+{   
+    // editor - general
+    "editor.renderWhitespace": "all",
+    // notebook - general
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    // python - general
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.terminal.executeInFileDir": true,
+    // linting and formatting - general
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    // black
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "${workspaceFolder}/.venv/bin/black",
+    "python.formatting.blackArgs": [
+        "--config",
+        "${workspaceFolder}/pyproject.toml"
+    ],
+    "files.exclude": {
+        "**/.git": false
+    }
+}

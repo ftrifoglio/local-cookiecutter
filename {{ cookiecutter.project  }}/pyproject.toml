@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "{{ cookiecutter.project }}"
+version = "0.0.0"
+description = ""
+authors = ["Federico Trifoglio <federico.trifoglio@assemblyglobal.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^{{ cookiecutter.python_version }}"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.8.0"
+toml = "^0.10.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line_length = 88
