@@ -29,10 +29,12 @@ $(POETRY_DIR):
 	@python -m venv $(POETRY_DIR)
 	@$(PIP) install pip --upgrade --quiet
 	@$(PIP) install wheel --quiet
-	@$(PIP) install poetry==1.4.1 --quiet
+	@$(PIP) install poetry==1.6.1 --quiet
 
 $(VENV_DIR): $(POETRY_DIR)
 	@$(POETRY) install --no-interaction
+	@$(POETRY) add {{ cookiecutter.main_packages }}
+	@$(POETRY) add {{ cookiecutter.dev_packages }} -G dev
 
 .PHONY = _venv venv
 

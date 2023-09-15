@@ -1,4 +1,7 @@
 {
     "project": "project-name",
-    "python_version": 3.11
+    "description": "Project description",
+    "python_version": 3.11,
+    "main_packages": "pandas[performance]@latest ipykernel",
+    "dev_packages": "pre-commit@^3.4.0 pytest@^7"
 }
